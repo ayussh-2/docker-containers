@@ -1,7 +1,6 @@
-version: "3.8"
 services:
     psql:
-        build: .
+        image: postgres:17.5-alpine
         container_name: psql_db
         ports:
             - "5432:5432"
