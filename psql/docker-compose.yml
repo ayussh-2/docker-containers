@@ -1,9 +1,10 @@
 services:
     psql:
-        image: postgres:17.5-alpine
+        image: pgvector/pgvector:pg17
         container_name: psql_db
         ports:
             - "5432:5432"
+        restart: always
         environment:
             POSTGRES_USER: postgres
             POSTGRES_PASSWORD: postgres
